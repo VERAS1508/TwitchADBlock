@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitch AdBlock</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <img src="../icons/icon48.png" alt="" class="logo" width="32" height="32" />
+        <div>
+          <h1>Twitch AdBlock</h1>
+          <p class="subtitle">Stream-level ad blocking for Twitch</p>
+        </div>
+      </header>
+      <label class="toggle-row">
+        <span class="toggle-label">Block video ads</span>
+        <input type="checkbox" id="enabled" aria-describedby="status" />
+      </label>
+      <p id="status" class="status" role="status">Loading…</p>
+      <footer class="footer">
+        <a href="https://github.com/VERAS1508/TwitchADBlock" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
