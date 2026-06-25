@@ -1,5 +1,9 @@
 # Twitch AdBlock
 
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install%20Now-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/twitch-adblock/jegdfbnbldeijhaencocloolfnaeiiii)
+
+**Install:** [chromewebstore.google.com/detail/twitch-adblock](https://chromewebstore.google.com/detail/twitch-adblock/jegdfbnbldeijhaencocloolfnaeiiii)
+
 A lightweight **Chrome extension** (Manifest V3) that blocks video ads on [Twitch](https://www.twitch.tv/) at the stream level — before ads reach the player.
 
 Built on the proven [**VAFT**](https://github.com/pixeltris/TwitchAdSolutions) engine from [TwitchAdSolutions](https://github.com/pixeltris/TwitchAdSolutions) (MIT License).
@@ -13,7 +17,7 @@ Built on the proven [**VAFT**](https://github.com/pixeltris/TwitchAdSolutions) e
 - Blocks pre-roll and mid-roll video ads on Twitch live streams
 - Injects at `document_start` — hooks Twitch workers before the player initializes
 - Simple on/off toggle from the toolbar popup
-- No remote code — all logic is bundled locally (Chrome Web Store compliant)
+- No remote code — all logic is bundled locally
 - Open source and free to use
 
 ## How it works
@@ -26,12 +30,7 @@ Twitch serves video through HLS workers that fetch `.m3u8` playlists. VAFT inter
 
 ## Installation
 
-### Download release (recommended)
-
-1. Open [Releases](https://github.com/VERAS1508/TwitchADBlock/releases) and download `twitch-adblock-v1.0.0.zip`
-2. **Chrome Web Store:** upload the ZIP as-is in the [Developer Dashboard](https://chrome.google.com/webstore/devconsole)
-3. **Local install:** extract the ZIP, then go to `chrome://extensions` → **Load unpacked** → select the extracted folder
-4. Reload any open Twitch tabs
+Install the extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/twitch-adblock/jegdfbnbldeijhaencocloolfnaeiiii), then reload any open Twitch tabs.
 
 ### Build from source
 
@@ -79,22 +78,6 @@ The bundled engine lives in [`src/vaft.js`](src/vaft.js). To update from upstrea
 2. Remove the userscript header (`// ==UserScript==` … `// ==/UserScript==`)
 3. Save as `src/vaft.js`
 4. Reload the extension on `chrome://extensions`
-
-## Chrome Web Store
-
-To publish or update a listing:
-
-1. Download the latest `twitch-adblock-v*.zip` from [Releases](https://github.com/VERAS1508/TwitchADBlock/releases)
-2. Upload it in the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole)
-3. Link to [`PRIVACY.md`](PRIVACY.md) as your privacy policy
-
-To build a new package locally:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts/package-release.ps1
-```
-
-Output is written to `dist/twitch-adblock-v{version}.zip`.
 
 ## Project structure
 
